@@ -5,7 +5,6 @@ import io
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from pydantic import BaseModel
 import fitz
 import os
 from dotenv import load_dotenv
@@ -22,7 +21,6 @@ def extract_pdf_text(file):
         try:
             page_text = page.get_text("text")
         except:
-            # fallback to raw text mode
             page_text = page.get_text()
         
         if not isinstance(page_text, str):
@@ -109,7 +107,7 @@ if uploaded:
         text = extract_pdf_text(uploaded)
 
     st.subheader("🔍 Extracted Text Preview")
-    st.text_area("", text[:5000], height=300)
+    st.text_area("", text[:4000], height=300)
 
     if st.button("Process Document"):
         with st.spinner("Extracting key:value pairs..."):
