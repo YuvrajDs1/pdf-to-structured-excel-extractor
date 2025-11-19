@@ -123,7 +123,6 @@ if uploaded:
 
         st.write("### Final Structured Output")
         st.write("Please Run Again in Case of Empty Output")
-        st.dataframe(pd.DataFrame(final_rows))
 
         excel_bytes = convert_to_excel(final_rows)
         st.download_button(
@@ -132,3 +131,4 @@ if uploaded:
             file_name="Generated-Output.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
+        st.dataframe(pd.DataFrame(final_rows))
