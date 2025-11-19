@@ -122,6 +122,7 @@ if uploaded:
         st.success("Processing complete!")
 
         st.write("### Final Structured Output")
+        st.write("Please Run Again in Case of Empty Output")
         st.dataframe(pd.DataFrame(final_rows))
 
         excel_bytes = convert_to_excel(final_rows)
