@@ -1,6 +1,6 @@
 # PDF to Structured Information Excel Extractor
 
-**Live:** https://pdf-to-structured-excel.streamlit.app
+**Live:** https://pdf-to-structured-excel-extractor-1.streamlit.app
 
 ## Overview
 
