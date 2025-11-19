@@ -122,7 +122,7 @@ if uploaded:
         st.success("Processing complete!")
 
         st.write("### Final Structured Output")
-        st.write("Please Run Again in Case of Empty Output")
+        st.write("Please Re-run the Page Case of Empty Output")
 
         excel_bytes = convert_to_excel(final_rows)
         st.download_button(
