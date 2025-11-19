@@ -11,3 +11,4 @@ regex
 python-dotenv
 langchain
 langchain_groq
+PyMuPDF
