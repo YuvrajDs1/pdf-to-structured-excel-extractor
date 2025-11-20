@@ -125,10 +125,10 @@ if uploaded:
         st.write("Please Re-run the Page Case of Empty Output")
 
         excel_bytes = convert_to_excel(final_rows)
+        st.dataframe(pd.DataFrame(final_rows))
         st.download_button(
             label="📥 Download Generated Output.xlsx",
             data=excel_bytes,
             file_name="Generated-Output.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
-        st.dataframe(pd.DataFrame(final_rows))
