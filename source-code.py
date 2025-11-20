@@ -107,7 +107,11 @@ if uploaded:
         text = extract_pdf_text(uploaded)
 
     st.subheader("🔍 Extracted Text Preview")
-    st.text_area("", text[:4000], height=300)
+    st.text_area(
+    label="Extracted Text Preview", 
+    value=text[:4000], 
+    height=300, 
+    label_visibility="collapsed")
 
     if st.button("Process Document"):
         with st.spinner("Extracting key:value pairs..."):
