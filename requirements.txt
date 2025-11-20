@@ -4,11 +4,8 @@ pandas
 openpyxl
 python-multipart
 langchain
-tqdm
 pytesseract
-Pillow
 regex
 python-dotenv
-langchain
 langchain_groq
 PyMuPDF
